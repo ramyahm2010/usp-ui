@@ -1,46 +1,3 @@
-/* Font declaration */
-@font-face {
-  font-family: 'ibm-regular';
-  src: url('/assets/fonts/ibm-regular.eot');
-  src: url('/assets/fonts/ibm-regular.woff') format('woff'), url('/assets/fonts/ibm-regular.woff2') format('woff2'),
-    url('/assets/fonts/ibm-regular.eot?#iefix') format('embedded-opentype');
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ibm-medium';
-  src: url('/assets/fonts/ibm-medium.eot');
-  src: url('/assets/fonts/ibm-medium.woff') format('woff'), url('/assets/fonts/ibm-medium.woff2') format('woff2'),
-    url('/assets/fonts/ibm-medium.eot?#iefix') format('embedded-opentype');
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ibm-semibold';
-  src: url('/assets/fonts/ibm-semibold.eot');
-  src: url('/assets/fonts/ibm-semibold.woff') format('woff'), url('/assets/fonts/ibm-semibold.woff2') format('woff2'),
-    url('/assets/fonts/ibm-semibold.eot?#iefix') format('embedded-opentype');
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ibm-bold';
-  src: url('/assets/fonts/ibm-bold.eot');
-  src: url('/assets/fonts/ibm-bold.woff') format('woff'), url('/assets/fonts/ibm-bold.woff2') format('woff2'),
-    url('/assets/fonts/ibm-bold.eot?#iefix') format('embedded-opentype');
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Typography Mixin */
-@mixin typography($font-size, $line-height) {
-  font-size: $font-size;
-  line-height: $line-height;
-}
-
 /* Typography Scales */
 $typography-scales: (
   'text-h1': (
@@ -134,13 +91,13 @@ $typography-scales: (
 /* Font Weight Classes */
 $font-weights: (
   // .font-regular 400
-  'regular': 'ibm-regular',
+  // 'regular': 'ibm-regular',
   // .font-medium 500
-  'medium': 'ibm-medium',
+  // 'medium': 'ibm-medium',
   // .font-semibold 600
-  'semibold': 'ibm-semibold',
+  // 'semibold': 'ibm-semibold',
   // .font-bold 700
-  'bold': 'ibm-bold'
+  // 'bold': 'ibm-bold'
 );
 
 @each $weight-name, $weight-value in $font-weights {

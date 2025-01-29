@@ -41,6 +41,14 @@ Import the components in your project:
 
 ---
 
+## Font Used: IBM Plex Sans Arabic
+
+To achieve maximum consistency with the Unified Design Standards, feel free to use **IBM Plex Sans Arabic** font. It is an open-source font available on [Google Fonts](https://fonts.google.com/specimen/IBM+Plex+Sans+Arabic).
+
+For further guidance on how to use this font, please refer to the [Google Fonts official website](https://fonts.google.com/).
+
+---
+
 ## Contributors
 
 We thank the following contributors for their efforts in building and maintaining this project:
