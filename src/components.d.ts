@@ -7,6 +7,26 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface UspBtn {
+        /**
+          * Color token (e.g. "primary-500", "accent-100") or hex code (e.g. "#FF5733").
+         */
+        "color"?: string;
+        /**
+          * Whether the button is disabled.
+         */
+        "disabled": boolean;
+        /**
+          * Button size ("sm", "md", "lg").
+         */
+        "size": 'sm' | 'md' | 'lg';
+        /**
+          * The HTML type of the button ("button", "submit", or "reset").
+         */
+        "type": 'button' | 'submit' | 'reset';
+        /**
+          * Variant of the button ("flat" or "outlined").
+         */
+        "variant": 'flat' | 'outlined';
     }
 }
 declare global {
@@ -22,6 +42,26 @@ declare global {
 }
 declare namespace LocalJSX {
     interface UspBtn {
+        /**
+          * Color token (e.g. "primary-500", "accent-100") or hex code (e.g. "#FF5733").
+         */
+        "color"?: string;
+        /**
+          * Whether the button is disabled.
+         */
+        "disabled"?: boolean;
+        /**
+          * Button size ("sm", "md", "lg").
+         */
+        "size"?: 'sm' | 'md' | 'lg';
+        /**
+          * The HTML type of the button ("button", "submit", or "reset").
+         */
+        "type"?: 'button' | 'submit' | 'reset';
+        /**
+          * Variant of the button ("flat" or "outlined").
+         */
+        "variant"?: 'flat' | 'outlined';
     }
     interface IntrinsicElements {
         "usp-btn": UspBtn;

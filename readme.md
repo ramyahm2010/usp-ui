@@ -37,6 +37,7 @@ Import the components in your project:
 ## Components
 
 - `<usp-btn>`: Button component.
+- [`<usp-btn>`: Button component](./src/components/usp-btn/readme.md)
 - More components coming soon!
 
 ---
@@ -80,13 +81,13 @@ For further guidance on how to use this font, please refer to the [Google Fonts 
 
 ## Contributors
 
-We thank the following contributors for their efforts in building and maintaining this project:
+Thanks to the following contributors for their efforts in building and maintaining this project:
 
 - **Amr Eissa**  
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://www.linkedin.com/in/engamreissa)
 
 - **Ramy Ahmed**  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://www.linkedin.com/in/ramyahm)
+  [![Website](https://img.shields.io/badge/Website-Visit-red)](https://ramyahmed.com)
 
 ---
 

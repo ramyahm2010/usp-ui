@@ -1,0 +1,32 @@
+@use 'sass:color';
+
+@function generate-color-palettes($base-colors, $palette-shades) {
+  $color-palettes: ();
+
+  @each $name, $base-color in $base-colors {
+    $shades: ();
+
+    @each $shade, $adjust in $palette-shades {
+      // Adjust lightness based on the adjustment value
+      $shade-color: if($adjust != 0, color.scale($base-color, $lightness: $adjust * 100%), $base-color);
+
+      // Add the generated shade to the shades map
+      $shades: map-merge(
+        $shades,
+        (
+          $shade: $shade-color,
+        )
+      );
+    }
+
+    // Add the shades map to the color palettes map
+    $color-palettes: map-merge(
+      $color-palettes,
+      (
+        $name: $shades,
+      )
+    );
+  }
+
+  @return $color-palettes;
+}

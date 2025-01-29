@@ -1,0 +1,44 @@
+$base-colors: (
+  primary: #25935f,
+  secondary: #80519f,
+  accent: #6c737f,
+  error: #f04438,
+  warning: #f79009,
+  info: #2e90fa,
+  success: #17b26a,
+);
+
+$palette-shades: (
+  25: 0.95,
+  50: 0.9,
+  100: 0.75,
+  200: 0.6,
+  300: 0.4,
+  400: 0.2,
+  500: 0,
+  600: -0.1,
+  700: -0.2,
+  800: -0.3,
+  900: -0.4,
+  950: -0.6,
+);
+
+// Simple tint/shade function.
+@function tint-shade($color, $percentage) {
+  @if $percentage > 0 {
+    @return mix(white, $color, $percentage * 100%);
+  } @else if $percentage < 0 {
+    @return mix(black, $color, $percentage * -100%);
+  } @else {
+    @return $color;
+  }
+}
+
+// Generate all color shade variables (e.g. --primary-100, --accent-500, etc.)
+:root {
+  @each $color-name, $color-value in $base-colors {
+    @each $shade, $ratio in $palette-shades {
+      --#{$color-name}-#{$shade}: #{tint-shade($color-value, $ratio)};
+    }
+  }
+}

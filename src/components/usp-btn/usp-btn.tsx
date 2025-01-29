@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Host, Prop } from '@stencil/core';
 
 @Component({
   tag: 'usp-btn',
@@ -7,46 +7,78 @@ import { Component, h } from '@stencil/core';
 })
 export class UspBtn {
   /**
-   * Button type: 'button', 'submit', or 'reset'
+   * Color token (e.g. "primary-500", "accent-100") or hex code (e.g. "#FF5733").
    */
-  // @Prop() type: 'button' | 'submit' | 'reset' = 'button';
+  @Prop() color?: string;
 
   /**
-   * Button size: 'small', 'medium', 'large'
+   * Button size ("sm", "md", "lg").
    */
-  // @Prop() size: 'small' | 'medium' | 'large' = 'medium';
+  @Prop() size: 'sm' | 'md' | 'lg' = 'md';
 
   /**
-   * Button variant: 'primary', 'secondary', 'tertiary'
+   * Variant of the button ("flat" or "outlined").
    */
-  // @Prop() variant: 'primary' | 'secondary' | 'tertiary' = 'primary';
+  @Prop() variant: 'flat' | 'outlined' = 'flat';
 
   /**
-   * Disabled state of the button
+   * Whether the button is disabled.
    */
-  // @Prop() disabled: boolean = false;
+  @Prop() disabled: boolean = false;
+
+  /**
+   * The HTML type of the button ("button", "submit", or "reset").
+   */
+  @Prop() type: 'button' | 'submit' | 'reset' = 'button';
+
+  /**
+   * Decide if the input color is a token (like "primary-500") or a raw hex (like "#FF5733").
+   */
+  private isTokenColor(color: string) {
+    // A simple heuristic: check if the string is of the pattern `someName-someNumber`.
+    // You could also store known tokens in a map for a robust check.
+    return /.+-\d{1,3}$/.test(color);
+  }
+
+  private getColorStyle(): { [key: string]: string } {
+    if (!this.color) return {};
+
+    // Distinguish between color tokens and direct hex values
+    const styleColor = this.isTokenColor(this.color)
+      ? `var(--${this.color})`
+      : this.color; // use as-is if it’s a hex (or other valid CSS color)
+
+    if (this.variant === 'flat') {
+      return {
+        backgroundColor: styleColor,
+        color: '#ffffff', // or pick a better contrast color
+      };
+    } else {
+      return {
+        backgroundColor: 'transparent',
+        color: styleColor,
+        borderColor: styleColor,
+      };
+    }
+  }
 
   render() {
+    const buttonClass = {
+      [`size-${this.size}`]: true,
+      [`variant-${this.variant}`]: true,
+    };
+
     return (
-      <button
-        class={{
-          btn: true,
-        }}
-        type='button'
-      >
-        <slot />
-      </button>
-    //   <button
-    //   class={{
-    //     btn: true,
-    //     [`btn-${this.size}`]: true,
-    //     [`btn-${this.variant}`]: true,
-    //   }}
-    //   type={this.type}
-    //   disabled={this.disabled}
-    // >
-    //   <slot />
-    // </button>
+      <Host>
+        <button
+          type={this.type}
+          style={this.getColorStyle()}
+          class={buttonClass}
+          disabled={this.disabled}
+        >
+          <slot />
+        </button>
+      </Host>
     );
   }
 }

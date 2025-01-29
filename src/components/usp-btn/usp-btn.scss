@@ -1,21 +1,47 @@
-@import '../../styles/typography';
+@import '../../styles/tokens';
 
 :host {
   display: inline-block;
 }
 
 button {
-  all: unset;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+
+button.size-sm {
+  padding: 3px 8px;
+  font-size: 12px;
+}
+
+button.size-md {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+button.size-lg {
   padding: 8px 16px;
   font-size: 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  background-color: #1b8354;
-  color: #fff;
-  font-family: 'ibm-medium', sans-serif;
-  height: 40px;
+}
+
+/* Variants */
+button.variant-flat {
+  color: #ffffff;
+}
+
+button.variant-outlined {
+  background-color: transparent;
+  border: 2px solid currentColor;
+}
+
+/* Disabled */
+button:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: var(--accent-400);
+  background-color: var(--accent-200);
 }
