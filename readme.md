@@ -26,7 +26,14 @@ Import the components in your project:
 <script type="module" src="https://cdn.jsdelivr.net/npm/@ramy-ahmed/usp-ui/dist/usp-ui/usp-ui.esm.js"></script>
 ```
 
-2. Use the components in you HTML:
+2. Add the following style to your HTML or app entry point:
+
+```html
+<script type="module" src="https://cdn.jsdelivr.net/npm/@ramy-ahmed/usp-ui/dist/usp-ui/usp-ui.css"></script>
+```
+
+
+3. Use the components in you HTML:
 
 ```html
 <usp-btn>Click Me</usp-btn>
@@ -36,7 +43,6 @@ Import the components in your project:
 
 ## Components
 
-- `<usp-btn>`: Button component.
 - [`<usp-btn>`: Button component](./src/components/usp-btn/readme.md)
 - More components coming soon!
 
