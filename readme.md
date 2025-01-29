@@ -6,7 +6,7 @@ This library provides lightweight and reusable web components aligned with the U
 
 ---
 
-### Installation
+## Installation
 
 Install the package using NPM:
 
@@ -16,7 +16,7 @@ npm install @ramy-ahmed/usp-ui
 
 ---
 
-### Usage
+## Usage
 
 Import the components in your project:
 
@@ -26,7 +26,7 @@ Import the components in your project:
 <script type="module" src="https://cdn.jsdelivr.net/npm/@ramy-ahmed/usp-ui/dist/usp-ui/usp-ui.esm.js"></script>
 ```
 
-1. Use the components in you HTML:
+2. Use the components in you HTML:
 
 ```html
 <usp-btn>Click Me</usp-btn>
@@ -34,14 +34,14 @@ Import the components in your project:
 
 ---
 
-### Components
+## Components
 
 - `<usp-btn>`: Button component.
 - More components coming soon!
 
 ---
 
-### Future development
+## Future development
 
 This project is continuously evolving to meet the needs of developers and align with modern standards. Here are some planned future developments:
 
@@ -70,7 +70,7 @@ We encourage contributors to join us in shaping the future of this library. If y
 
 ---
 
-### Font guidelines
+## Font guidelines
 
 To achieve maximum consistency with the Unified Design Standards, feel free to use **IBM Plex Sans Arabic** font. It is an open-source font available on [Google Fonts](https://fonts.google.com/specimen/IBM+Plex+Sans+Arabic).
 
@@ -78,7 +78,7 @@ For further guidance on how to use this font, please refer to the [Google Fonts 
 
 ---
 
-### Contributors
+## Contributors
 
 We thank the following contributors for their efforts in building and maintaining this project:
 
@@ -90,7 +90,7 @@ We thank the following contributors for their efforts in building and maintainin
 
 ---
 
-### Disclaimer
+## Disclaimer
 
 This project is provided "as is," without any warranties, whether express or implied. The contributors assume no responsibility for any damages resulting from the use of this code.
 
@@ -98,6 +98,6 @@ This library is an open-source project created for educational and development p
 
 ---
 
-### License
+## License
 
 This project is licensed under the MIT License.
