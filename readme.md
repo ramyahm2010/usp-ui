@@ -46,10 +46,10 @@ Import the components in your project:
 We thank the following contributors for their efforts in building and maintaining this project:
 
 - **Amr Eissa**  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://www.linkedin.com/in/ramyahm)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://www.linkedin.com/in/engamreissa)
 
 - **Ramy Ahmed**  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://www.linkedin.com/in/engamreissa)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://www.linkedin.com/in/ramyahm)
 
 ---
 
