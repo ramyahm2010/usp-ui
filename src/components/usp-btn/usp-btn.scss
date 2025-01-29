@@ -1,0 +1,21 @@
+@import '../../styles/typography';
+
+:host {
+  display: inline-block;
+}
+
+button {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  background-color: #1b8354;
+  color: #fff;
+  font-family: 'ibm-medium', sans-serif;
+  height: 40px;
+}

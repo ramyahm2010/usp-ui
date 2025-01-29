@@ -1,4 +1,5 @@
 import { Config } from '@stencil/core';
+import { sass } from '@stencil/sass';
 
 export const config: Config = {
   namespace: 'usp-ui',
@@ -21,6 +22,8 @@ export const config: Config = {
     },
   ],
   testing: {
-    browserHeadless: "shell",
+    browserHeadless: 'shell',
   },
+  globalStyle: 'src/styles/styles.scss',
+  plugins: [sass()],
 };
